@@ -1,4 +1,5 @@
 """Most common algorithms written in Python 3."""
+from collections import deque
 
 
 def binary_search(sorted_list, value) -> int:
@@ -103,4 +104,61 @@ def quick_sort(array) -> list:
     left_shoulder = [i for i in array if i < pivot]
     right_shoulder = [i for i in array if i > pivot]
     return quick_sort(left_shoulder) + [pivot] + quick_sort(right_shoulder)
+
+
+class BreadthFirstSearch:
+    """"
+    Breadth search. Finds closes way from start till the end.
+
+    Test data set:
+
+    graph = {
+    "you" : ["alice", "bob", "claire"],
+    "bob" : ["anuj", "peggy"],
+    "alice" : ["peggy"],
+    "claire" : ["thom", "jonny"],
+    "anuj" : [],
+    "peggy" : [],
+    "thom" : [],
+    "jonny" : []
+    }
+    """
+    def __init__(self, graph):
+        """
+        Takes graph as input and start search from the point 'you'.
+
+        :param graph: dict, input graph
+        """
+        self.graph = graph
+        self.breadth_first_search('you')
+
+    @staticmethod
+    def person_is_seller(name):
+        """
+        Fake function to identify who is the seller by the last name letter.
+
+        :param name: str, name for the comparison
+        """
+        return name[-1] == 'j'
+
+    def breadth_first_search(self, name):
+        """
+        Actual search over the graph.
+
+        :param name: str, the name of starting edge in the graph
+        :return: Bool, true if person in graph and false if not
+        """
+        search_queue = deque()
+        search_queue += self.graph[name]
+        searched = []
+        while search_queue:
+            person = search_queue.popleft()
+            if person not in searched:
+                if self.person_is_seller(person):
+                    print(f'found the seller it is {person}')
+                    return True
+                else:
+                    search_queue += self.graph[person]
+                    searched.append(person)
+        return False
 
