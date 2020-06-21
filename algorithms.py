@@ -162,3 +162,57 @@ class BreadthFirstSearch:
                     searched.append(person)
         return False
 
+
+class Dijkstra:
+    """
+    Search for lowest cost in weighted graph.
+    Doesn't work for negative weights.
+
+    Test data:
+
+    graph = {
+        "start" : { "a": 6, "b" : 2},
+        "a" : { "fin" : 1 },
+        "b" : { "a" : 3, "fin" : 5},
+        "fin" : {}
+            }
+
+    costs = {
+        "a" : 6,
+        "b" : 2,
+        "fin" : float('inf')
+            }
+
+    parents = {
+        "a" : "start",
+        "b" : "start",
+        "fin" : None
+            }
+    """
+    def __init__(self, graph, costs, parents):
+        self.processed = []
+        node = self.find_lowest_cost_node(costs)
+        while node is not None:
+            cost = float(costs[node])
+            neighbors = graph[node]
+            for n in neighbors.keys():
+                new_cost = cost + float(neighbors[n])
+                if float(costs[n]) > new_cost:
+                    costs[n] = new_cost
+                    parents[n] = node
+            self.processed.append(node)
+            node = self.find_lowest_cost_node(costs)
+
+    def find_lowest_cost_node(self, costs):
+        """
+        Compares nodes costs.
+        :param costs: dict, dict with costs values.
+        """
+        lowest_cost = float('inf')
+        lowest_cost_node = None
+        for node in costs:
+            cost = float(costs[node])
+            if cost < lowest_cost and node not in self.processed:
+                lowest_cost = cost
+                lowest_cost_node = node
+        return lowest_cost_node
