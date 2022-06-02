@@ -6,21 +6,21 @@ size. The values returned by a hash function are called hash values, hash
 codes, or simply hashes. If two keys map to the same value, a collision occurs.
 
 Collision Resolution:
--	**Separate Chaining**: each bucket is independent, and contains a list of
+-  **Separate Chaining**: each bucket is independent, and contains a list of
 	entries for each index. The time for hash map operations is the time to
 	find the bucket (constant time), plus the time to iterate through the list.
--	**Open Addressing**: when a new entry is inserted, the buckets are examined,
+-  **Open Addressing**: when a new entry is inserted, the buckets are examined,
 	starting with the hashed-to-slot and proceeding in some sequence, until an
 	unoccupied slot is found. The name open addressing refers to the fact that
 	the location of an item is not always determined by its hash value.
 
 Time Complexity:
--	Access: `O(1)`
--	Search: `O(1) or O(n)`
--	Insert: `O(1) or O(n)`
--	Remove: `O(1) or O(n)`
+-  Access: `O(1)`
+-  Search: `O(1) or O(n)`
+-  Insert: `O(1) or O(n)`
+-  Remove: `O(1) or O(n)`
 
-[![Click to watch explanation on YouTube](../images/hash.png?raw=true)](https://www.youtube.com/watch?v=OnPP5xDmFv0)
+[![Click to watch explanation on YouTube](../images/hash.png?raw=true)](https://www.youtube.com/watch?v=A-ahUVi8pYQ)
 
 ## Problems
 
@@ -58,10 +58,10 @@ Output: [0,1]
 ```
 
 Constraints:
--	`2 <= nums.length <= 104`
--	`-109 <= nums[i] <= 109`
--	`-109 <= target <= 109`
--	Only one valid answer exists.
+-  `2 <= nums.length <= 104`
+-  `-109 <= nums[i] <= 109`
+-  `-109 <= target <= 109`
+-  Only one valid answer exists.
  
 Follow-up: Can you come up with an algorithm that is less than O(n2) time
 complexity?
