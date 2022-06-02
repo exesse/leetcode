@@ -17,7 +17,7 @@ An island is surrounded by water and is formed by connecting adjacent lands hori
 
 Example 1:
 
-```
+```python3
 Input: grid = [
   ["1","1","1","1","0"],
   ["1","1","0","1","0"],
@@ -26,8 +26,9 @@ Input: grid = [
 ]
 Output: 1
 ```
+
 Example 2:
-```
+```python3
 Input: grid = [
   ["1","1","0","0","0"],
   ["1","1","0","0","0"],
@@ -36,13 +37,14 @@ Input: grid = [
 ]
 Output: 3
 ```
-Constraints:
 
-    m == grid.length
-    n == grid[i].length
-    1 <= m, n <= 300
-    grid[i][j] is '0' or '1'.
-    
+Constraints:
+```python3
+m == grid.length
+n == grid[i].length
+1 <= m, n <= 300
+grid[i][j] is '0' or '1'.
+``` 
 
 </p></details>
 
@@ -63,7 +65,7 @@ Constraints:
 
 ```
 class Solution:
-    def DFS(self, grid, slice_index, value_index):
+    def dfs(self, grid: List[List[str]], slice_index: int, value_index: int) -> int:
         if slice_index < 0 or slice_index >= len(grid)-1:
             return 0
         if value_index < 0 or value_index >= len(grid)-1:
@@ -71,10 +73,10 @@ class Solution:
         if grid[slice_index][value_index] == '0':
             return 0
         grid[slice_index][value_index] = '0'
-        self.DFS(grid, slice_index, value_index-1)
-        self.DFS(grid, slice_index, value_index+1)
-        self.DFS(grid, slice_index-1, value_index)
-        self.DFS(grid, slice_index+1, value_index)
+        self.dfs(grid, slice_index, value_index-1)
+        self.dfs(grid, slice_index, value_index+1)
+        self.dfs(grid, slice_index-1, value_index)
+        self.dfs(grid, slice_index+1, value_index)
         return 1
 
     def numIslands(self, grid: List[List[str]]) -> int:
@@ -84,7 +86,7 @@ class Solution:
         for slice_index in range(len(grid)):
             for value_index in range(len(grid[slice_index])):
                 if grid[slice_index][value_index] == "1":
-                    countIslands += self.DFS(grid, slice_index, value_index)                                                              
+                    countIslands += self.dfs(grid, slice_index, value_index)                                                              
         return countIslands   
 ```
 
