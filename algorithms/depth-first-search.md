@@ -1,5 +1,6 @@
 # Depth First Search
-A graph traversal algorithm which explores as far as possible along each branch before backtracking.
+A graph traversal algorithm which explores as far as possible along each branch
+before backtracking.
 
 Time Complexity: `O(|V| + |E|)`
 
@@ -9,11 +10,14 @@ Time Complexity: `O(|V| + |E|)`
 
 ### Number of Islands
 
-[Problem #200]()
+[Problem #200](https://leetcode.com/problems/number-of-islands)
 
-Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
+Given an m x n 2D binary grid grid which represents a map of '1's (land) and
+'0's (water), return the number of islands.
 
-An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+An island is surrounded by water and is formed by connecting adjacent lands
+horizontally or vertically. You may assume all four edges of the grid are all
+surrounded by water.
 
 Example 1:
 
@@ -39,12 +43,10 @@ Output: 3
 ```
 
 Constraints:
-```python3
-m == grid.length
-n == grid[i].length
-1 <= m, n <= 300
-grid[i][j] is '0' or '1'.
-``` 
+-	`m == grid.length`
+-	`n == grid[i].length`
+-	`1 <= m, n <= 300`
+-	`grid[i][j] is '0' or '1'`
 
 </p></details>
 
@@ -57,13 +59,13 @@ grid[i][j] is '0' or '1'.
   
 **Golang**:
  
-```
+```go
 // TODO(exesse): paste solution here
 ```
 
 **Python3**:
 
-```
+```python3
 class Solution:
     def dfs(self, grid: List[List[str]], slice_index: int, value_index: int) -> int:
         if slice_index < 0 or slice_index >= len(grid)-1:
