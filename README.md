@@ -8,6 +8,7 @@ Fun way to learn **Algorithms** and **Data Structures** by solving
 - [Data Structures](#data-structures)
   -  [Array](#array)
   -  [Hash Map](#hash-map)
+
 -  [Algorithms](#algorithms)
    -  [Breadth First Search](#breadth-first-search)
    -  [Depth First Search](#depth-first-search)

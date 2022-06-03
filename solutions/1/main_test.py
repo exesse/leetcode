@@ -1,4 +1,4 @@
-"1. Two Sum tests"
+"""1. Two Sum tests."""
 from main import Solution
 
 TESTDATA = [
@@ -9,7 +9,7 @@ TESTDATA = [
 
 
 def test_solution():
-    "Compares result of Solution with given input."
+    """Compares result of Solution with given input."""
     for test in TESTDATA:
         got, want = Solution().twoSum(test[0], test[1]), test[2]
         assert got == want
