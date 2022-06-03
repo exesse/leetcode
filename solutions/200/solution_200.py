@@ -1,4 +1,5 @@
-"""200. Number of Islands
+"""
+200. Number of Islands
 
 Given an m x n 2D binary grid grid which represents a map of '1's (land) and
 '0's (water), return the number of islands.
@@ -37,6 +38,7 @@ Constraints:
 
 
 class Solution:
+
     """Contains functions needed to compute the result."""
 
     def dfs(self, grid, slice_index, value_index):

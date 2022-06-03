@@ -20,6 +20,7 @@ TESTDATA = [
 
 
 def test_solution():
+
     """Compares result of Solution with test input."""
 
     for test in TESTDATA:
