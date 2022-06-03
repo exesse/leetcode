@@ -1,4 +1,4 @@
-// package solution200 | https://leetcode.com/problems/number-of-islands
+// package solution200 for the problem https://leetcode.com/problems/number-of-islands
 // 200. Number of Islands
 // Given an m x n 2D binary grid grid which represents a map of '1's (land) and
 // '0's (water), return the number of islands.

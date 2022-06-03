@@ -22,7 +22,6 @@ TESTDATA = [
 def test_solution():
 
     """Compares result of Solution with test input."""
-
     for test in TESTDATA:
         got, want = Solution().numIslands(test[0]), test[1]
         assert got == want
