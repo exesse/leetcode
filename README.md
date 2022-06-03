@@ -26,6 +26,9 @@ each identified by at least one array index or key.
 
 [![Click to watch explanation on YouTube](images/array.gif?raw=true)](https://www.youtube.com/watch?v=OnPP5xDmFv0)
 
+**Problems**:
+-  [1. Two Sum](https://leetcode.com/problems/two-sum) | Solution in [go](solutions/1/solution_1.go), [python3](solutions/1/solution_1.py)
+
 ### Hash Map
 A data structure that can map keys to values. A hash map uses a hash function
 to compute an index into an array of buckets or slots, from which the desired
@@ -52,7 +55,7 @@ codes, or simply hashes. If two keys map to the same value, a collision occurs.
 [![Click to watch explanation on YouTube](images/hash.png?raw=true)](https://www.youtube.com/watch?v=A-ahUVi8pYQ)
 
 **Problems**:
--  [1. Two Sum](https://leetcode.com/problems/two-sum) | Solution in [go](solutions/1/main.go), [python3](solutions/1/main.py)
+-  [1. Two Sum](https://leetcode.com/problems/two-sum) | Solution in [go](solutions/1/solution_1.go), [python3](solutions/1/solution_1.py)
 
 ## Algorithms
 ### Breadth First Search
@@ -72,4 +75,4 @@ before backtracking.
 [![Click to watch explanation on YouTube](images/dfs.gif?raw=true)](https://www.youtube.com/watch?v=wp5ohHFTieM)
 
 **Problems**:
--  [200. Number of Islands](https://leetcode.com/problems/number-of-islands) | Solution in [go](solutions/200/main.go), [python3](solutions/200/main.py)
+-  [200. Number of Islands](https://leetcode.com/problems/number-of-islands) | Solution in [go](solutions/200/solution_200.go), [python3](solutions/200/solution_200.py)
