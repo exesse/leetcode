@@ -1,5 +1,7 @@
 # Data Structures and Algorithms
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/d48797b58ac24b858c3c508c544b0cfa)](https://www.codacy.com/gh/exesse/leetcode/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=exesse/leetcode&amp;utm_campaign=Badge_Grade)
+[![Python](https://github.com/exesse/leetcode/actions/workflows/py_actions.yml/badge.svg)](https://github.com/exesse/leetcode/actions/workflows/py_actions.yml)
+[![Go](https://github.com/exesse/leetcode/actions/workflows/go_actions.yml/badge.svg)](https://github.com/exesse/leetcode/actions/workflows/go_actions.yml)
 
 Fun way to learn **Algorithms** and **Data Structures** by solving
 [LeetCode](https://leetcode.com) problems. 
