@@ -12,10 +12,10 @@ var (
 		[]byte("0"),
 		[]byte("1"),
 	}
-	wantIslands = 4
+	wantIslands = 3
 )
 
-func testSolution(t *testing.T) {
+func TestSolution(t *testing.T) {
 	if got, want := numIslands(testData), wantIslands; got != want {
 		t.Errorf("numIslands(%v): got number of islands: %d: want: %d", testData, got, want)
 	}

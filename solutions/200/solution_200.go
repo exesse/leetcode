@@ -31,8 +31,6 @@
 //     grid[i][j] is '0' or '1'.
 package solution200
 
-import "fmt"
-
 const (
 	zero = 48
 	one  = 49
@@ -47,9 +45,7 @@ func numIslands(grid [][]byte) int {
 	for sliceIndex, slice := range grid {
 		for valueIndex, value := range slice {
 			if value == one {
-				fmt.Println(grid)
 				countIslands += dfs(&grid, sliceIndex, valueIndex)
-				fmt.Println(grid)
 			}
 		}
 
