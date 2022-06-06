@@ -31,6 +31,29 @@ each identified by at least one array index or key.
 **Problems**:
 -  [1. Two Sum](https://leetcode.com/problems/two-sum) | Solution in [go](solutions/1/solution_1.go), [python3](solutions/1/solution_1.py)
 
+### Linked List
+A linear collection of data elements, called nodes, each pointing to the next
+node by means of a pointer. It is a data structure consisting of a group of
+nodes which together represent a sequence. Possible types are:
+
+-  *Singly-linked list*: linked list in which each node points to the next
+    node and the last node points to null.
+
+-  *Doubly-linked list*: linked list in which each node has two pointers, p
+    and n, such that p points to the previous node and n points to the next
+    node; the last node's n pointer points to null.
+
+-  *Circular-linked list*: linked list in which each node points to the next
+    node and the last node points back to the first node.
+
+**Time Complexity**:
+-  Access: `O(n)`
+-  Search: `O(n)`
+-  Insert: `O(1)`
+-  Remove: `O(1)`
+
+[![Click to watch explanation on YouTube](images/llist.gif?raw=true)](https://www.youtube.com/watch?v=zxkpZrozDUk)
+
 ### Hash Map
 A data structure that can map keys to values. A hash map uses a hash function
 to compute an index into an array of buckets or slots, from which the desired
